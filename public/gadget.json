@@ -206,5 +206,44 @@
     "rating": 4.3,
     "brand": "Nova",
     "release_date": "2024-06-11"
+  },
+  {
+    "product_id": 17,
+    "product_title": "FuturaSlim Z9",
+    "product_image": "https://i.ibb.co/s9kM06M4/HP-ZBook-Firefly-14-G9-Intel-Core-i7-12th-Gen-2.webp",
+    "category": "Laptops",
+    "price": 729.00,
+    "description": "Ultra-thin laptop for fast-paced professionals.",
+    "specification": ["Intel i7", "16GB RAM", "512GB SSD", "Windows 11 Pro"],
+    "availability": true,
+    "rating": 4.6,
+    "brand": "Futura",
+    "release_date": "2024-08-14"
+  },
+  {
+    "product_id": 18,
+    "product_title": "CoreVision Edge 14",
+    "product_image": "https://i.ibb.co/bjzt54fh/c07394316.png",
+    "category": "Laptops",
+    "price": 599.99,
+    "description": "Compact performance laptop for everyday users.",
+    "specification": ["Intel i3", "8GB RAM", "256GB SSD", "Windows 11"],
+    "availability": true,
+    "rating": 4.2,
+    "brand": "CoreVision",
+    "release_date": "2024-09-01"
+  },
+  {
+    "product_id": 19,
+    "product_title": "Smartify EvoBook X",
+    "product_image": "https://i.ibb.co/kgKPk3nD/msi-summit-e13-ai-evo-a1mtg-flip-intel-core-ultra-51729075528.webp",
+    "category": "Laptops",
+    "price": 689.50,
+    "description": "Smartify's flagship laptop with AI-ready processing.",
+    "specification": ["Intel i7", "16GB RAM", "512GB SSD", "Windows 11"],
+    "availability": true,
+    "rating": 4.7,
+    "brand": "Smartify",
+    "release_date": "2024-07-30"
   }
 ]

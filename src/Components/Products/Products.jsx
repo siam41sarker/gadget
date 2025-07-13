@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
-import { useLoaderData, useNavigate } from "react-router";
+import { useLoaderData } from "react-router";
 const Products = () => {
     const allData = useLoaderData();
     const [fileredData, setFilteredData] = useState([]);
     const [active, setActive] = useState('one');
-    console.log(allData.length)
-    const navg = useNavigate();
     return (
         <div className="max-w-7xl mt-36 mx-auto md:mt-[450px]">
             <h1 className="text-[rgb(11,11,11)] sora font-bold text-3xl md:text-[40px] text-center">Explore Cutting-Edge Gadgets</h1>
@@ -61,24 +59,24 @@ const Products = () => {
                 {
                     active === 'one' ? <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
                         {
-                            allData.map(eachData => <div className="w-11/12 md:w-full mx-auto border border-solid border-[rgba(9,8,15,0.1)] h-[450px] justify-between bg-white rounded-2xl flex flex-col gap-6 p-6">
+                            allData.map(eachData => <div key={eachData.product_id} className="w-11/12 md:w-full mx-auto border border-solid border-[rgba(9,8,15,0.1)] h-[450px] justify-between bg-white rounded-2xl flex flex-col gap-6 p-6 transition hover:scale-105 hover:cursor-pointer shadow-md shadow-[rgba(149,56,226,0.5)]">
                                 <div className="w-11/12 h-[181px] rounded-xl">
                                     <img className="w-full h-full object-cover rounded-xl" src={eachData.product_image} alt="" />
                                 </div>
                                 <h2 className="text-[rgb(9,8,15)] sora text-2xl font-semibold">{eachData.product_title}</h2>
                                 <p className="text-[rgba(9,8,15,0.6)] sora text-xl font-medium">Price: {eachData.price}</p>
-                                <NavLink to="/details" className="w-[159px] h-[52px] rounded-[32px] border border-solid border-[rgb(149,56,226)] flex justify-center items-center  text-[rgb(149,56,226)] sora text-lg font-semibold">View Details</NavLink>
+                                <NavLink to="/details" className="w-[159px] h-[52px] rounded-[32px] border border-solid border-[rgb(149,56,226)] flex justify-center items-center  text-[rgb(149,56,226)] sora text-lg font-semibold transition hover:text-white hover:bg-[rgb(149,56,226)]">View Details</NavLink>
                             </div>)
                         }
                     </div> : fileredData.length > 0 ? <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
                         {
-                            fileredData.map(eachData => <div className="w-11/12 md:w-full mx-auto border border-solid border-[rgba(9,8,15,0.1)] h-[450px] bg-white rounded-2xl flex flex-col justify-between p-6">
+                            fileredData.map(eachData => <div key={eachData.product_id} className="w-11/12 md:w-full mx-auto border border-solid border-[rgba(9,8,15,0.1)] h-[450px] bg-white rounded-2xl flex flex-col justify-between p-6 transition hover:scale-105 hover:cursor-pointer shadow-md shadow-[rgba(149,56,226,0.5)]">
                                 <div className="w-11/12 h-[181px] rounded-xl">
                                     <img className="w-full h-full object-cover rounded-xl" src={eachData.product_image} alt="" />
                                 </div>
                                 <h2 className="text-[rgb(9,8,15)] sora text-2xl font-semibold">{eachData.product_title}</h2>
                                 <p className="text-[rgba(9,8,15,0.6)] sora text-xl font-medium">Price: {eachData.price}</p>
-                                <NavLink to="/details" className="w-[159px] h-[52px] border border-solid border-[rgb(149,56,226)] flex justify-center items-center rounded-[32px]  text-[rgb(149,56,226)] sora text-lg font-semibold">View Details</NavLink>
+                                <NavLink to="/details" className="w-[159px] h-[52px] border border-solid border-[rgb(149,56,226)] flex justify-center items-center rounded-[32px]  text-[rgb(149,56,226)] sora text-lg font-semibold transition hover:text-white hover:bg-[rgb(149,56,226)]">View Details</NavLink>
                             </div>)
                         }
                     </div> : <div className=" w-11/12 md:w-4/5 mx-auto h-[400px] md:h-auto border border-solid border-[rgba(9,8,15,0.1)] rounded-2xl flex justify-center items-center text-3xl md:text-5xl sora font-medium text-[rgba(9,8,15,0.6)] text-center">No Data Found</div>
