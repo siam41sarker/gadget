@@ -13,8 +13,21 @@ const gadgetRouter =  createBrowserRouter([
         errorElement:<ErrorElement></ErrorElement>,
         children:[
             {
-                path:'/details',
-                element:<ProductDetails></ProductDetails>
+                path:'/:det',
+                element:<ProductDetails></ProductDetails>,
+                loader: async () =>
+                    {
+                        try
+                          {
+                              const response = await fetch('gadget.json');
+                              const allData = await response.json();
+                              return allData;
+                          }
+                        catch(e)
+                            {
+                                console.log(e);
+                            }
+                    }
             },
             {
                 path:'/',

@@ -17,7 +17,6 @@ const Header = () => {
                         setIsTransparent('no');
                     }
             },[pathname])
-    console.log(pathname);
     return (
         <header className={` ${pathname === '/' && 'md:h-[600px] rounded-[32px] max-w-7xl'} bg-[rgb(149,56,226)] md:mx-auto lg:mx-auto  border-[7px] border-solid border-[rgb(246,246,246)]`}>
            {pathname === '/' &&  <NavBar isTransparent={isTransparent}></NavBar>}

@@ -1,5 +1,6 @@
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { CiHeart } from "react-icons/ci";
+import { NavLink } from "react-router";
 const NavBar = ({isTransparent}) => {
     return (
         <div>
@@ -30,8 +31,7 @@ const NavBar = ({isTransparent}) => {
                             <li className="font-bold sora text-black"><a>Dashboard</a></li>
                         </ul>
                     </div>
-                    <a className={`${isTransparent === 'yes' ? 'text-white' : 'text-[rgba(11,11,11,0.7)]'} btn btn-ghost text-base md:text-xl lg:text-xl font-bold sora ml-4 md:ml-0 lg:ml-0`}>Gadget Heaven</a>
-
+                    <NavLink to={'/'} className={`${isTransparent === 'yes' ? 'text-white' : 'text-[rgba(11,11,11,0.7)]'} btn btn-ghost text-base md:text-xl lg:text-xl font-bold sora ml-4 md:ml-0 lg:ml-0`}>Gadget Heaven</NavLink>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

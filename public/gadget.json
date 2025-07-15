@@ -10,7 +10,8 @@
     "availability": true,
     "rating": 4.8,
     "brand": "Techie",
-    "release_date": "2024-10-09"
+    "release_date": "2024-10-09",
+    "rating_stars": "★★★★★"
   },
   {
     "product_id": 2,
@@ -23,7 +24,8 @@
     "availability": false,
     "rating": 4.5,
     "brand": "GizmoMax",
-    "release_date": "2024-07-23"
+    "release_date": "2024-07-23",
+    "rating_stars": "★★★★⯪"
   },
   {
     "product_id": 3,
@@ -36,7 +38,8 @@
     "availability": true,
     "rating": 4.6,
     "brand": "NextGen",
-    "release_date": "2024-09-17"
+    "release_date": "2024-09-17",
+    "rating_stars": "★★★★⯪"
   },
   {
     "product_id": 4,
@@ -49,7 +52,8 @@
     "availability": true,
     "rating": 4.7,
     "brand": "Smartify",
-    "release_date": "2024-06-11"
+    "release_date": "2024-06-11",
+    "rating_stars": "★★★★⯪"
   },
   {
     "product_id": 5,
@@ -62,7 +66,8 @@
     "availability": false,
     "rating": 4.2,
     "brand": "Pulse",
-    "release_date": "2024-01-30"
+    "release_date": "2024-01-30",
+    "rating_stars": "★★★★☆"
   },
   {
     "product_id": 6,
@@ -75,7 +80,8 @@
     "availability": true,
     "rating": 4.4,
     "brand": "Nova",
-    "release_date": "2024-04-17"
+    "release_date": "2024-04-17",
+    "rating_stars": "★★★★☆"
   },
   {
     "product_id": 7,
@@ -88,7 +94,8 @@
     "availability": true,
     "rating": 4.3,
     "brand": "ZenCore",
-    "release_date": "2024-05-06"
+    "release_date": "2024-05-06",
+    "rating_stars": "★★★★☆"
   },
   {
     "product_id": 8,
@@ -101,7 +108,8 @@
     "availability": false,
     "rating": 4.0,
     "brand": "Smartify",
-    "release_date": "2024-03-22"
+    "release_date": "2024-03-22",
+    "rating_stars": "★★★★☆"
   },
   {
     "product_id": 9,
@@ -114,7 +122,8 @@
     "availability": true,
     "rating": 4.1,
     "brand": "FlexTech",
-    "release_date": "2024-06-10"
+    "release_date": "2024-06-10",
+    "rating_stars": "★★★★☆"
   },
   {
     "product_id": 10,
@@ -127,7 +136,8 @@
     "availability": true,
     "rating": 4.5,
     "brand": "Pulse",
-    "release_date": "2024-08-01"
+    "release_date": "2024-08-01",
+    "rating_stars": "★★★★⯪"
   },
   {
     "product_id": 11,
@@ -140,7 +150,8 @@
     "availability": true,
     "rating": 4.3,
     "brand": "Smartify",
-    "release_date": "2024-05-28"
+    "release_date": "2024-05-28",
+    "rating_stars": "★★★★☆"
   },
   {
     "product_id": 12,
@@ -153,7 +164,8 @@
     "availability": false,
     "rating": 4.6,
     "brand": "NextGen",
-    "release_date": "2024-04-03"
+    "release_date": "2024-04-03",
+    "rating_stars": "★★★★⯪"
   },
   {
     "product_id": 13,
@@ -166,7 +178,8 @@
     "availability": true,
     "rating": 4.8,
     "brand": "Apple",
-    "release_date": "2024-11-03"
+    "release_date": "2024-11-03",
+    "rating_stars": "★★★★★"
   },
   {
     "product_id": 14,
@@ -179,7 +192,8 @@
     "availability": true,
     "rating": 4.9,
     "brand": "Apple",
-    "release_date": "2024-10-10"
+    "release_date": "2024-10-10",
+    "rating_stars": "★★★★★"
   },
   {
     "product_id": 15,
@@ -192,7 +206,8 @@
     "availability": false,
     "rating": 4.6,
     "brand": "Apple",
-    "release_date": "2024-06-05"
+    "release_date": "2024-06-05",
+    "rating_stars": "★★★★⯪"
   },
   {
     "product_id": 16,
@@ -205,7 +220,8 @@
     "availability": true,
     "rating": 4.3,
     "brand": "Nova",
-    "release_date": "2024-06-11"
+    "release_date": "2024-06-11",
+    "rating_stars": "★★★★☆"
   },
   {
     "product_id": 17,
@@ -218,7 +234,8 @@
     "availability": true,
     "rating": 4.6,
     "brand": "Futura",
-    "release_date": "2024-08-14"
+    "release_date": "2024-08-14",
+    "rating_stars": "★★★★⯪"
   },
   {
     "product_id": 18,
@@ -231,7 +248,8 @@
     "availability": true,
     "rating": 4.2,
     "brand": "CoreVision",
-    "release_date": "2024-09-01"
+    "release_date": "2024-09-01",
+    "rating_stars": "★★★★☆"
   },
   {
     "product_id": 19,
@@ -244,6 +262,7 @@
     "availability": true,
     "rating": 4.7,
     "brand": "Smartify",
-    "release_date": "2024-07-30"
+    "release_date": "2024-07-30",
+    "rating_stars": "★★★★⯪"
   }
 ]
