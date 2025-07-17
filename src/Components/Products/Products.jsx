@@ -13,49 +13,49 @@ const Products = () => {
                     <button onClick={() => {
                         setActive('one');
                         setFilteredData(allData);
-                    }} className={`${active === 'one' ? 'bg-[rgb(149,56,226)] text-white' : 'bg-[rgba(9,8,15,0.05)] text-[rgba(9,8,15,0.6)]'} " rounded-2xl  w-[192px] h-[52px] sora text-lg font-medium "`}>All Products</button>
+                    }} className={`${active === 'one' ? 'bg-[rgb(149,56,226)] text-white' : 'bg-[rgba(9,8,15,0.05)] text-[rgba(9,8,15,0.6)]'} " hover:bg-[rgb(149,56,226)] rounded-2xl  w-[192px] h-[52px] sora text-lg font-medium "`}>All Products</button>
                     <button onClick={() => {
                         setActive('two');
                         const filtered = allData.filter(each => each.category === 'Laptops');
                         setFilteredData(filtered);
                     }
 
-                    } className={`${active === 'two' ? 'bg-[rgb(149,56,226)] text-white' : 'bg-[rgba(9,8,15,0.05)] text-[rgba(9,8,15,0.6)]'} " rounded-2xl  w-[192px] h-[52px] sora text-lg font-medium "`}>Laptops</button>
+                    } className={`${active === 'two' ? 'bg-[rgb(149,56,226)] text-white' : 'bg-[rgba(9,8,15,0.05)] text-[rgba(9,8,15,0.6)]'} " hover:bg-[rgb(149,56,226)] rounded-2xl  w-[192px] h-[52px] sora text-lg font-medium "`}>Laptops</button>
                     <button onClick={() => {
                         setActive('three');
                         const filtered = allData.filter(each => each.category === 'Phones');
                         setFilteredData(filtered);
                     }
 
-                    } className={`${active === 'three' ? 'bg-[rgb(149,56,226)] text-white' : 'bg-[rgba(9,8,15,0.05)] text-[rgba(9,8,15,0.6)]'} " rounded-2xl w-[192px] h-[52px] sora text-lg font-medium "`}>Phones</button>
+                    } className={`${active === 'three' ? 'bg-[rgb(149,56,226)] text-white' : 'bg-[rgba(9,8,15,0.05)] text-[rgba(9,8,15,0.6)]'} " hover:bg-[rgb(149,56,226)] rounded-2xl w-[192px] h-[52px] sora text-lg font-medium "`}>Phones</button>
                     <button onClick={() => {
                         setActive('four');
                         const filtered = allData.filter(each => each.category === 'Accessories');
                         setFilteredData(filtered);
                     }
 
-                    } className={`${active === 'four' ? 'bg-[rgb(149,56,226)] text-white' : 'bg-[rgba(9,8,15,0.05)] text-[rgba(9,8,15,0.6)]'} " rounded-2xl w-[192px] h-[52px] sora text-lg font-medium "`}>Accessories</button>
+                    } className={`${active === 'four' ? 'bg-[rgb(149,56,226)] text-white' : 'bg-[rgba(9,8,15,0.05)] text-[rgba(9,8,15,0.6)]'} " hover:bg-[rgb(149,56,226)] rounded-2xl w-[192px] h-[52px] sora text-lg font-medium "`}>Accessories</button>
                     <button onClick={() => {
                         setActive('five');
                         const filtered = allData.filter(each => each.category === 'Smart Watches');
                         setFilteredData(filtered);
                     }
 
-                    } className={`${active === 'five' ? 'bg-[rgb(149,56,226)] text-white' : 'bg-[rgba(9,8,15,0.05)] text-[rgba(9,8,15,0.6)]'} " rounded-2xl w-[192px] h-[52px] sora text-lg font-medium "`}>Smart Watches</button>
+                    } className={`${active === 'five' ? 'bg-[rgb(149,56,226)] text-white' : 'bg-[rgba(9,8,15,0.05)] text-[rgba(9,8,15,0.6)]'} " hover:bg-[rgb(149,56,226)] rounded-2xl w-[192px] h-[52px] sora text-lg font-medium "`}>Smart Watches</button>
                     <button onClick={() => {
                         setActive('six');
                         const filtered = allData.filter(each => each.category === 'MacBook');
                         setFilteredData(filtered);
                     }
-                    } className={`${active === 'six' ? 'bg-[rgb(149,56,226)] text-white' : 'bg-[rgba(9,8,15,0.05)] text-[rgba(9,8,15,0.6)]'} " rounded-2xl w-[192px] h-[52px] sora text-lg font-medium "`}>MacBook</button>
+                    } className={`${active === 'six' ? 'bg-[rgb(149,56,226)] text-white' : 'bg-[rgba(9,8,15,0.05)] text-[rgba(9,8,15,0.6)]'} " hover:bg-[rgb(149,56,226)] rounded-2xl w-[192px] h-[52px] sora text-lg font-medium "`}>MacBook</button>
                     <button onClick={() => {
                         setActive('seven');
                         const filtered = allData.filter(each => each.category === 'Iphone');
                         setFilteredData(filtered);
                     }
 
-                    } className={`${active === 'seven' ? 'bg-[rgb(149,56,226)] text-white' : 'bg-[rgba(9,8,15,0.05)] text-[rgba(9,8,15,0.6)]'} " rounded-2xl w-[192px] h-[52px] sora text-lg font-medium "`}>Iphone</button>
-                </div>
+                    } className={`${active === 'seven' ? 'bg-[rgb(149,56,226)] text-white' : 'bg-[rgba(9,8,15,0.05)] text-[rgba(9,8,15,0.6)]'} " hover:bg-[rgb(149,56,226)] rounded-2xl w-[192px] h-[52px] sora text-lg font-medium "`}>Iphone</button>
+                </div> 
                 {
                     active === 'one' ? <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
                         {
@@ -64,8 +64,8 @@ const Products = () => {
                                     <img className="w-full h-full object-cover rounded-xl" src={eachData.product_image} alt="" />
                                 </div>
                                 <h2 className="text-[rgb(9,8,15)] sora text-2xl font-semibold">{eachData.product_title}</h2>
-                                <p className="text-[rgba(9,8,15,0.6)] sora text-xl font-medium">Price: {eachData.price}</p>
-                                <NavLink to={`/${eachData.product_title.toLowerCase().replace(/\s+/g,'-')}`} className="w-[159px] h-[52px] rounded-[32px] border border-solid border-[rgb(149,56,226)] flex justify-center items-center  text-[rgb(149,56,226)] sora text-lg font-semibold transition hover:text-white hover:bg-[rgb(149,56,226)]">View Details</NavLink>
+                                <p className="text-[rgba(9,8,15,0.6)] sora text-xl font-medium">Price: ${eachData.price}</p>
+                                <NavLink to={`/${eachData.product_title.toLowerCase().replace(/\s+/g, '-')}`} className="w-[159px] h-[52px] rounded-[32px] border border-solid border-[rgb(149,56,226)] flex justify-center items-center  text-[rgb(149,56,226)] sora text-lg font-semibold transition hover:text-white hover:bg-[rgb(149,56,226)]">View Details</NavLink>
                             </div>)
                         }
                     </div> : fileredData.length > 0 ? <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
@@ -76,13 +76,13 @@ const Products = () => {
                                 </div>
                                 <h2 className="text-[rgb(9,8,15)] sora text-2xl font-semibold">{eachData.product_title}</h2>
                                 <p className="text-[rgba(9,8,15,0.6)] sora text-xl font-medium">Price: {eachData.price}</p>
-                                <NavLink to={`/${eachData.product_title.toLowerCase().replace(/\s+/g,'-')}`} className="w-[159px] h-[52px] border border-solid border-[rgb(149,56,226)] flex justify-center items-center rounded-[32px]  text-[rgb(149,56,226)] sora text-lg font-semibold transition hover:text-white hover:bg-[rgb(149,56,226)]">View Details</NavLink>
+                                <NavLink to={`/${eachData.product_title.toLowerCase().replace(/\s+/g, '-')}`} className="w-[159px] h-[52px] border border-solid border-[rgb(149,56,226)] flex justify-center items-center rounded-[32px]  text-[rgb(149,56,226)] sora text-lg font-semibold transition hover:text-white hover:bg-[rgb(149,56,226)]">View Details</NavLink>
                             </div>)
                         }
                     </div> : <div className=" w-11/12 md:w-4/5 mx-auto h-[400px] md:h-auto border border-solid border-[rgba(9,8,15,0.1)] rounded-2xl flex justify-center items-center text-3xl md:text-5xl sora font-medium text-[rgba(9,8,15,0.6)] text-center">No Data Found</div>
                 }
             </div>
-            
+
         </div>
     );
 }

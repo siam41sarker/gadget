@@ -1,7 +1,9 @@
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { CiHeart } from "react-icons/ci";
-import { NavLink } from "react-router";
+import { NavLink, useLocation } from "react-router";
 const NavBar = ({isTransparent}) => {
+    const loc = useLocation();
+    console.log(loc.pathname);
     return (
         <div>
              <div className={`navbar ${isTransparent === 'yes' ? 'bg-transparent' : 'bg-white'} px-2 md:px-20 lg:px-20`}>
@@ -35,11 +37,13 @@ const NavBar = ({isTransparent}) => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        <li className={`${isTransparent === 'yes' ? 'text-white' : 'text-[rgba(11,11,11,0.7)]'} font-bold sora`}><a>Home</a></li>
-                        <li className={`${isTransparent === 'yes' ? 'text-white' : 'text-[rgba(11,11,11,0.7)]'} font-bold sora `}>
-                            <a>Statistics</a>
+                        <li className={`${isTransparent === 'yes' ? loc.pathname === '/' ? 'text-[rgb(159,56,226)] bg-white rounded-[32px]' : 'text-white' : 'text-[rgba(11,11,11,0.7)]'} font-bold sora`}><NavLink to='/'>Home</NavLink></li>
+                        <li className={`${isTransparent === 'yes' ? 'text-white' : loc.pathname === '/statistics'? 'text-[rgb(159,56,226)]' : 'text-[rgba(11,11,11,0.7)]'} font-bold sora `}>
+                            <NavLink to={'/statistics'}>Statistics</NavLink>
                         </li>
-                        <li className={`${isTransparent === 'yes' ? 'text-white' : 'text-[rgba(11,11,11,0.7)]'} font-bold sora `}><a>Dashboard</a></li>
+                             <li className={`${isTransparent === 'yes' ? 'text-white' : loc.pathname === '/dashboard'? 'text-[rgb(159,56,226)]' : 'text-[rgba(11,11,11,0.7)]'} font-bold sora `}>
+                            <NavLink to={'/dashboard'}>Dashboard</NavLink>
+                        </li>
                     </ul>
                 </div>
                 <div className="navbar-end">

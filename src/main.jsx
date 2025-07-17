@@ -6,6 +6,7 @@ import Root from './Components/Root/Root'
 import ErrorElement from './Components/ErrorElement/ErrorElement'
 import Products from './Components/Products/Products'
 import ProductDetails from './Components/ProductDetails/ProductDetails'
+import Statistics from './Components/Statistics/Statistics'
 const gadgetRouter =  createBrowserRouter([
     {
         path:'/',
@@ -44,6 +45,23 @@ const gadgetRouter =  createBrowserRouter([
                             {
                                 console.log(e);
                             }
+                    }
+            },
+            {
+                path:'/statistics',
+                element:<Statistics></Statistics>,
+                loader: async () =>
+                    {
+                        try
+                            {
+                                const res = await fetch('gadget.json');
+                                const data = await res.json();
+                                return data;
+                            }
+                        catch (e) 
+                              {
+                                 return console.log(e);
+                              }
                     }
             }
         ]

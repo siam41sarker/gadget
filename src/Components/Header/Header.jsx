@@ -5,7 +5,8 @@ import NavBar from '../NavBar/NavBar';
 import { useEffect, useState } from 'react';
 const Header = () => {
     const {pathname} = useLocation();
-    const [isTransparent,setIsTransparent] = useState('yes')  ;
+    const [isTransparent,setIsTransparent] = useState('yes');
+    
     useEffect(()=>
             {
                 if(pathname === '/')
