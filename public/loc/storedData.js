@@ -5,7 +5,7 @@ const getStoredDataFromLs = () =>
         }
 const setToLs = id =>
         {
-            let updatedData;
+            let updatedData = [];
             const getCartDataFromLs = getStoredDataFromLs();
             if(getCartDataFromLs.includes(id))
                 {
@@ -17,4 +17,25 @@ const setToLs = id =>
                     localStorage.setItem("Cart",JSON.stringify(updatedData));
                 }
         }
-export {getStoredDataFromLs,setToLs}
+const getStrWFromLs = () =>
+    {
+        const getStrW = localStorage.getItem("Wishlist");
+        return getStrW ? JSON.parse(getStrW) : [];
+    }
+const SaveWToLs = id =>
+    {
+        let updatedWish = [];
+        const valWStr = getStrWFromLs();
+        if(valWStr.includes(id))
+            {
+                console.log("Already added to the Wish List!");
+            }
+        else
+            {
+                updatedWish = [...valWStr,id];
+                localStorage.setItem("Wishlist",JSON.stringify(updatedWish));
+            }
+
+    }
+
+export {getStoredDataFromLs,setToLs,getStrWFromLs,SaveWToLs}

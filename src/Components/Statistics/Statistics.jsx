@@ -3,7 +3,7 @@ import { useLoaderData, useLocation } from "react-router";
 import NavBar from "../NavBar/NavBar";
 import Banner from "../Banner/Banner";
 import { FiSliders } from 'react-icons/fi'
-import { getStoredDataFromLs } from "../../../public/loc/storedData";
+import { getStoredDataFromLs, getStrWFromLs } from "../../../public/loc/storedData";
 import { TiDeleteOutline } from "react-icons/ti";
 const Statistics = () => {
     const { pathname } = useLocation();
@@ -11,6 +11,7 @@ const Statistics = () => {
     const [cartBool, setCartBool] = useState('one');
     const loadedAllData = useLoaderData();
     const [cartData, setCartData] = useState([]);
+    const[wishData,setWishData] = useState([]);
     let TotalPrice = 0;
     console.log(loadedAllData);
     useEffect(() => {
@@ -21,7 +22,18 @@ const Statistics = () => {
             filteredFromAll.push(...filteredID);
         }
         setCartData(filteredFromAll);
-    }, [])
+    }, []);
+    useEffect(()=>
+            {
+                const getWishFromLs = getStrWFromLs();
+                const fileredData = [];
+                for(const ids of getWishFromLs)
+                    {
+                        const filteredWish = loadedAllData.filter(each=>each.product_id === ids);
+                        fileredData.push(...filteredWish);
+                    }
+                setWishData(fileredData);
+            },[])
     useEffect(() => {
         if (pathname === '/') {
             setIsTransparent('yes');
@@ -75,7 +87,7 @@ const Statistics = () => {
                     </div> : <div className="mt-12 max-w-7xl mx-auto">
                         <p className="text-[rgb(11,11,11)] sora text-2xl font-bold">WishList</p>
                         {
-                            cartData.map(each => <div key={each.product_id} className="mt-8 max-w-7xl h-[188px] mx-auto bg-white flex gap-8 rounded-2xl p-8">
+                            wishData.map(each => <div key={each.product_id} className="mt-8 max-w-7xl h-[188px] mx-auto bg-white flex gap-8 rounded-2xl p-8">
                                 <div className="w-1/6 rounded-xl">
                                     <img className="w-full h-full object-cover rounded-xl" src={each.product_image} alt={cartData.product_title} />
                                 </div>

@@ -3,7 +3,7 @@ import { productContext } from "../ProductDetails/ProductDetails";
 import { CiHeart } from "react-icons/ci";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useLocation } from "react-router";
-import { setToLs } from "../../../public/loc/storedData";
+import { SaveWToLs, setToLs } from "../../../public/loc/storedData";
 const Banner = ({ bannerImage, title, desc,setCartBool}) => {
     const contextProduct = useContext(productContext);
     console.log("Context: ");
@@ -11,6 +11,7 @@ const Banner = ({ bannerImage, title, desc,setCartBool}) => {
     const {pathname} = useLocation();
     const [isActive,setIsActive] = useState('one');
     const [isClicked,setIsClicked] = useState(false);
+    const [wishClicked,setWishClicked] = useState(false);
     const handleBtnsCartId = id =>
         {
             if(!isClicked)
@@ -18,17 +19,28 @@ const Banner = ({ bannerImage, title, desc,setCartBool}) => {
                     setIsClicked(true);
                     setToLs(id)
                 }
-            else 
-                {
-                    console.warn("Already Added");
-                }
+            else if (isClicked)
+            {
+                alert('Already Added!');
+            }
         }
     const handleBtns = info =>
         {
             setIsActive(info);
             setCartBool(info)
         }
-    
+    const handleWishId = id =>
+            {
+                if(!wishClicked)
+                    {
+                        setWishClicked(true);
+                        SaveWToLs(id);
+                    }
+                else
+                    {
+                        alert("Already added to the wish list!");
+                    }
+            }
     return (
         <div>
             <div className="mx-auto px-0 md:px-[150px]">
@@ -82,11 +94,11 @@ const Banner = ({ bannerImage, title, desc,setCartBool}) => {
                                     </div>
                             </div>
                              <div className="mt-3 flex gap-3">
-                                    <button onClick={()=>handleBtnsCartId(contextProduct.product_id)} className="w-[193px] h-12 rounded-[32px] text-[rgba(9,8,15,0.8)] hover:text-white bg-[rgba(9,8,15,0.05)] hover:bg-[rgb(149,56,226)] flex justify-center items-center gap-1">
-                                        <p className=" sora text-lg font-bold">Add to Cart</p>
+                                    <button onClick={()=>handleBtnsCartId(contextProduct.product_id)} className={`w-[193px] h-12 rounded-[32px] text-[rgba(9,8,15,0.8)] ${!isClicked && 'hover:text-white'} bg-[rgba(9,8,15,0.05)] ${isClicked ? 'bg-[#f0f0f0] text-gray-300 cursor-not-allowed' : 'text-[rgba(9,8,15,0.8)] bg-[rgba(9,8,15,0.05)] cursor-pointer'} ${!isClicked && 'hover:bg-[rgb(149,56,226)]'} flex justify-center items-center gap-1`}>
+                                        <p className=" sora text-lg font-bold">{`${isClicked?'Added' : 'Add to Cart'}`}</p>
                                          <AiOutlineShoppingCart className=" w-10 h-10 p-3" />
                                     </button>
-                                    <button> <CiHeart className="bg-white hover:bg-[rgb(149,56,226)] hover:text-white text-2xl rounded-full  border border-solid border-[rgba(11,11,11,0.1)] w-10 h-10 p-3" /></button>
+                                    <button onClick={()=>handleWishId(contextProduct.product_id)}> <CiHeart className={`bg-white ${!wishClicked && 'hover:bg-[rgb(149,56,226)]'} hover:text-white text-2xl rounded-full ${wishClicked ? 'bg-[#f0f0f0] text-gray-300 cursor-not-allowed' : 'text-[rgba(9,8,15,0.8)] bg-[rgba(9,8,15,0.05)] cursor-pointer'} border border-solid border-[rgba(11,11,11,0.1)] w-10 h-10 p-3`} /></button>
                             </div>
                         </div>
                         
