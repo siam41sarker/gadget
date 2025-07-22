@@ -7,6 +7,7 @@ import ErrorElement from './Components/ErrorElement/ErrorElement'
 import Products from './Components/Products/Products'
 import ProductDetails from './Components/ProductDetails/ProductDetails'
 import Statistics from './Components/Statistics/Statistics'
+import Dashboard from './Components/Dashboard/Dashboard'
 const gadgetRouter =  createBrowserRouter([
     {
         path:'/',
@@ -48,8 +49,8 @@ const gadgetRouter =  createBrowserRouter([
                     }
             },
             {
-                path:'/statistics',
-                element:<Statistics></Statistics>,
+                path:'/dashboard',
+                element:<Dashboard></Dashboard>,
                 loader: async () =>
                     {
                         try
@@ -63,6 +64,10 @@ const gadgetRouter =  createBrowserRouter([
                                  return console.log(e);
                               }
                     }
+            },
+            {
+                path:'/statistics',
+                element:<Statistics></Statistics>
             }
         ]
     }

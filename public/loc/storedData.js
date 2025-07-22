@@ -14,9 +14,13 @@ const setToLs = id =>
             else
                 {
                     updatedData = [...getCartDataFromLs,id];
-                    localStorage.setItem("Cart",JSON.stringify(updatedData));
+                    setToLsM(updatedData)
                 }
         }
+const setToLsM = idx =>
+    {
+        localStorage.setItem("Cart",JSON.stringify(idx));
+    }
 const getStrWFromLs = () =>
     {
         const getStrW = localStorage.getItem("Wishlist");
@@ -33,9 +37,24 @@ const SaveWToLs = id =>
         else
             {
                 updatedWish = [...valWStr,id];
-                localStorage.setItem("Wishlist",JSON.stringify(updatedWish));
+                SaveWToLsM(updatedWish)
             }
 
     }
-
-export {getStoredDataFromLs,setToLs,getStrWFromLs,SaveWToLs}
+const SaveWToLsM = idx =>
+    {
+        localStorage.setItem("Wishlist",JSON.stringify(idx));
+    }
+const deleteFromLs = id =>
+    {
+        const allCart = getStoredDataFromLs();
+        const filteredCart = allCart.filter(each=>each!==id);
+        setToLsM(filteredCart);
+    }
+const deleteWFromLs = id =>
+    {
+        const allWishData = getStrWFromLs();
+        const filteredWish = allWishData.filter(eachWish=>eachWish!==id);
+        SaveWToLsM(filteredWish);
+    }
+export {getStoredDataFromLs,setToLs,getStrWFromLs,SaveWToLs,deleteFromLs,deleteWFromLs}
