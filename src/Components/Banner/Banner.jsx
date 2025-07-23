@@ -75,7 +75,7 @@ const Banner = ({ bannerImage, title, desc, setCartBool }) => {
                     <div className="p-4 md:p-6">
                         <img className="rounded-3xl w-full h-full object-cover" src={bannerImage} alt="banner" />
                     </div>
-                </div> : pathname === '/dashboard' ? '' : <div className="mt-12 w-10/12 h-[350px] md:w-[980px] md:h-auto mx-auto border-2 border-solid bg-white border-white rounded-[32px] bg-[rgba(255,255,255,0.3)]">
+                </div> : pathname === '/dashboard' || pathname === '/statistics' || pathname === '/about_us' ? '' : <div className="mt-12 w-10/12 h-[350px] md:w-[980px] md:h-auto mx-auto border-2 border-solid bg-white border-white rounded-[32px] bg-[rgba(255,255,255,0.3)]">
                     <div className="p-4 md:p-6 flex flex-col md:flex-row gap-8">
                         <div className="w-full md:w-2/5 bg-[rgb(236,236,236)] flex justify-center items-center rounded-2xl">
                             <img className="w-11/12 h-2/3 object-cover rounded-2xl" src={contextProduct.product_image} alt={contextProduct.product_title} />

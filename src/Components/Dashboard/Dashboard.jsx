@@ -126,11 +126,11 @@ const Dashboard = () => {
                             <p className="text-[rgb(11,11,11)] sora text-2xl font-bold">Cart</p>
                             <div className="flex items-center">
                                 <p className="text-[rgb(11,11,11)] sora text-2xl font-bold">Total Cost: ${TotalPrice.toFixed(2)}</p>
-                                <button className={`w-[136px] text-[rgb(149,56,226)] hover:text-white hover:bg-[rgb(149,56,226)] ml-4 h-[52px] ${TotalPrice === 0 && 'bg-[#f0f0f0] text-gray-300 hover:bg-[#f0f0f0] cursor-not-allowed hover:text-gray-300 border-gray-300'} border border-solid border-[rgb(149,56,226)] flex justify-center items-center bg-transparent rounded-[32px] btn_shadow px-[11px] py-[22px] w-[196px] gap-4`}>
+                                <button className={`w-[136px]  ml-4 h-[52px] ${TotalPrice === 0 ? 'bg-[#f0f0f0] text-gray-300 hover:bg-[#f0f0f0] cursor-not-allowed hover:text-gray-300 border-gray-300' : 'text-[rgb(149,56,226)] hover:text-white hover:bg-[rgb(149,56,226)]'} border border-solid border-[rgb(149,56,226)] flex justify-center items-center bg-transparent rounded-[32px] btn_shadow px-[11px] py-[22px] w-[196px] gap-4`}>
                                     <p onClick={handleSort} className=" sora text-lg font-semibold"> Sort by Price</p>
                                     <FiSliders />
                                 </button>
-                                <button onClick={handleModalShow} className={`w-[136px] text-[rgb(149,56,226)] hover:text-white hover:bg-[rgb(149,56,226)] ml-4 h-[52px] ${TotalPrice === 0 && 'bg-[#f0f0f0] text-gray-300 hover:bg-[#f0f0f0] cursor-not-allowed hover:text-gray-300 border-gray-300'} border border-solid border-[rgb(149,56,226)] flex justify-center items-center bg-transparent rounded-[32px] btn_shadow`}>
+                                <button onClick={handleModalShow} className={`w-[136px]  ml-4 h-[52px] ${TotalPrice === 0 ? 'bg-[#f0f0f0] text-gray-300 hover:bg-[#f0f0f0] cursor-not-allowed hover:text-gray-300 border-gray-300': 'text-[rgb(149,56,226)] hover:text-white hover:bg-[rgb(149,56,226)] cursor-pointer'} border border-solid border-[rgb(149,56,226)] flex justify-center items-center bg-transparent rounded-[32px] btn_shadow`}>
                                     <p className="sora text-lg font-semibold">Purchase</p>
                                 </button>
                             </div>

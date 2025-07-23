@@ -8,6 +8,7 @@ import Products from './Components/Products/Products'
 import ProductDetails from './Components/ProductDetails/ProductDetails'
 import Statistics from './Components/Statistics/Statistics'
 import Dashboard from './Components/Dashboard/Dashboard'
+import About_us from './Components/About_us/About_us'
 const gadgetRouter =  createBrowserRouter([
     {
         path:'/',
@@ -30,6 +31,10 @@ const gadgetRouter =  createBrowserRouter([
                                 console.log(e);
                             }
                     }
+            },
+            {
+                path:'about_us',
+                element:<About_us></About_us>
             },
             {
                 path:'/',
@@ -67,7 +72,20 @@ const gadgetRouter =  createBrowserRouter([
             },
             {
                 path:'/statistics',
-                element:<Statistics></Statistics>
+                element:<Statistics></Statistics>,
+                loader: async ()=>
+                    {
+                        try
+                            {
+                                const stat = await fetch('gadget.json');
+                                const statDta = await stat.json();
+                                return statDta;
+                            }
+                        catch(e)
+                            {
+                                return console.log(e);
+                            }
+                    }
             }
         ]
     }

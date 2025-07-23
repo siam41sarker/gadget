@@ -36,6 +36,7 @@ const NavBar = ({ isTransparent }) => {
                             tabIndex={0}
                             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                             <li className="font-bold sora text-black"><a>Home</a></li>
+                            <li className="font-bold sora text-black"><NavLink to={'/about_us'}>About Us</NavLink></li>
                             <li className="font-bold sora text-black">
                                 <NavLink to={'/dashboard'}>Dashboard</NavLink>
                             </li>
@@ -47,6 +48,9 @@ const NavBar = ({ isTransparent }) => {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
                         <li className={`${isTransparent === 'yes' ? loc.pathname === '/' ? 'text-[rgb(159,56,226)] bg-white rounded-[32px]' : 'text-white' : 'text-[rgba(11,11,11,0.7)]'} font-bold sora`}><NavLink to='/'>Home</NavLink></li>
+                        <li className={`${isTransparent === 'yes' ? 'text-white' : loc.pathname === '/about_us' ? 'text-[rgb(159,56,226)]' : 'text-[rgba(11,11,11,0.7)]'} font-bold sora `}>
+                            <NavLink to={'/about_us'}>About Us</NavLink>
+                        </li>
                         <li className={`${isTransparent === 'yes' ? 'text-white' : loc.pathname === '/dashboard' ? 'text-[rgb(159,56,226)]' : 'text-[rgba(11,11,11,0.7)]'} font-bold sora `}>
                             <NavLink to={'/dashboard'}>Dashboard</NavLink>
                         </li>
