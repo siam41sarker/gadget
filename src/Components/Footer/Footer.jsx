@@ -2,7 +2,7 @@ import { NavLink } from "react-router";
 
 const Footer = () => {
     return (
-        <footer className="mt-10 pt-16 w-full h-[503px] bg-white">
+        <footer className="mt-20 pt-16 w-full h-[503px] bg-white">
             <div className="md:w-[950px] lg:w-[1280px] mx-auto border-b border-solid border-[rgba(9,8,15,0.1)] pb-8">
                 <div className=" flex w-full flex-col items-center gap-6">
                     <h2 className="text-[rgb(9,8,15)] sora text-[32px] font-bold">Gadget Heaven</h2>
