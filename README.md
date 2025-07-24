@@ -23,7 +23,7 @@
 ## Requirement Document Link
 https://github.com/siam41sarker/gadget.git
 ## Live Link
-https://gadget-heaven08-siam-sarker.netlify.app/
+https://gadget-heaven-by-muhammad-siam-sarker.netlify.app/
 
 
 
