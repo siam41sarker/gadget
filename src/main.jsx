@@ -9,6 +9,7 @@ import ProductDetails from './Components/ProductDetails/ProductDetails'
 import Statistics from './Components/Statistics/Statistics'
 import Dashboard from './Components/Dashboard/Dashboard'
 import About_us from './Components/About_us/About_us'
+import { HelmetProvider } from 'react-helmet-async'
 const gadgetRouter =  createBrowserRouter([
     {
         path:'/',
@@ -92,6 +93,9 @@ const gadgetRouter =  createBrowserRouter([
 ])
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-        <RouterProvider router={gadgetRouter}></RouterProvider>
+        <HelmetProvider>
+                <RouterProvider router={gadgetRouter}>
+                </RouterProvider>
+        </HelmetProvider>
   </StrictMode>,
 )

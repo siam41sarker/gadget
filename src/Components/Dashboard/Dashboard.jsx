@@ -8,6 +8,7 @@ import { TiDeleteOutline } from "react-icons/ti";
 import icons from "../../assets/Group.png"
 import { toast, ToastContainer } from "react-toastify";
 import { useNavigate } from "react-router";
+import { Helmet } from "react-helmet";
 const Dashboard = () => {
     const navToHome = useNavigate();
     const { pathname } = useLocation();
@@ -114,6 +115,9 @@ const Dashboard = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>DashBoard | Gadget Heaven</title>
+            </Helmet>
             <div className={`max-w-full ${pathname === `/dashboard` && 'md:h-[350px]'} bg-[rgb(149,56,226)] md:mx-auto lg:mx-auto  border-[7px] border-solid border-[rgb(246,246,246)]`}>
                 {pathname === `/dashboard` && <NavBar isTransparent={isTransparent}></NavBar>}
                 {pathname === `/dashboard` && <Banner title={'Dashboard'} desc={'Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!'} cartBool={cartBool} setCartBool={setCartBool}></Banner>}

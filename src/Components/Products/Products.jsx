@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import { NavLink } from "react-router";
 import { useLoaderData } from "react-router";
 const Products = () => {
@@ -7,6 +8,9 @@ const Products = () => {
     const [active, setActive] = useState('one');
     return (
         <div className="max-w-7xl mt-36 mx-auto md:mt-[450px]">
+            <Helmet>
+                <title>Home | Gadget Heaven</title>
+            </Helmet>
             <h1 className="text-[rgb(11,11,11)] sora font-bold text-3xl md:text-[40px] text-center">Explore Cutting-Edge Gadgets</h1>
             <div className="mt-12 flex flex-col md:flex-row gap-6">
                 <div className="w-11/12 mx-auto md:w-1/5 md:h-[556px] bg-white border border-solid border-[rgba(9,8,15,0.1)] rounded-2xl  flex flex-col items-center gap-6 py-6">

@@ -11,6 +11,7 @@ import siam from "../../assets/siam.jpg"
 import joy from "../../assets/joy.jpg"
 import khairul from "../../assets/khairul.jpg"
 import abir from "../../assets/abir.jpg"
+import { Helmet } from "react-helmet";
 const About_us = () => {
     const [isTransparent, setIsTransparent] = useState('no');
     const { pathname } = useLocation();
@@ -24,6 +25,9 @@ const About_us = () => {
     }, [pathname])
     return (
         <div>
+            <Helmet>
+                <title>About Us | Gadget Heaven</title>
+            </Helmet>
             <div className={`max-w-full ${pathname === `/about_us` && 'md:h-[260px]'} bg-[rgb(149,56,226)] md:mx-auto lg:mx-auto  border-[7px] border-solid border-[rgb(246,246,246)]`}>
                 {pathname === `/about_us` && <NavBar isTransparent={isTransparent}></NavBar>}
                 {pathname === `/about_us` && <Banner title={'About Us'} desc={'Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!'}></Banner>}
