@@ -1,3 +1,19 @@
 # Gadget Heaven
 ## Project Title
 * Gadget Heaven - React E-commerce Website
+## Objectives
+* To build a responsive and interactive e-commerce website that allows users to browsw, add to cart, and wishlist products, using React and Local Storage.
+## Target Users
+* Tech-savvy Users interested in purchasing modern electionics & gadgets.
+# List of React Fundamental concepts used in the project
+* **JSX–** For writing HTML-like structures in JavaScript.
+* **Components–** Functional Components for reusable UI pieces
+* **Props–** Data drilling between components.
+* **Various React Hooks (e.g., useState, useEffect, useParams, useLocation,useNavigate etc.)–** For tracking active views, toggole states , control third party API and triggers.
+* **Conditional Rendering–** To switch between banner/card layouts.
+* **React Router–** Used for dynamic routing.
+* **Context API–** For global data sharing.
+
+
+
+
