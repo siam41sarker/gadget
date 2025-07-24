@@ -2,7 +2,7 @@
 ## Project Title
 * Gadget Heaven - React E-commerce Website
 ## Objectives
-* To build a responsive and interactive e-commerce website that allows users to browsw, add to cart, and wishlist products, using React and Local Storage.
+* To build a responsive and interactive e-commerce website that allows users to browse, add to cart, and wishlist products, using React and Local Storage.
 ## Target Users
 * Tech-savvy Users interested in purchasing modern electionics & gadgets.
 ## List of React Fundamental concepts used in the project
